@@ -1,0 +1,37 @@
+<head>
+<meta charset="UTF-8">
+<title>User Information Form</title>
+</head>
+<body>
+
+<form action="" method="POST">
+{% csrf_token %}
+<input type="Submit" name="reg" value="Registration"/>
+<input type="Submit" name="in" value="SignIn"/>
+{% if regBut == "Registration" and  submitbutton != "Submit"%}
+{% csrf_token %}
+{{ form.as_p }}
+<input type="Submit" name="submit" value="Submit"/>
+    {% endif %}
+
+{% if sig == "SignIn"  and signed != "SignedIn" and checkOnSignIn == False%}
+    {{ signIn.as_p }}
+    <input type="Submit" name="signed" value="SignedIn"/>
+{% endif %}
+
+
+{% if signed == "SignedIn" and checkOnSignIn == True%}
+{{ signUp.as_p }}
+<input type="Submit" name="offer" value="Оставить заявку"/>
+{% endif %}
+
+{% if offer == "Оставить заявку"%}
+    <h1>Вы оставили заявку, при возможности изменения мы с вами свяжемся</h1>
+{% endif %}
+</form>
+
+    
+    
+    
+</body>
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'p3plcpnl0769'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script></html>
