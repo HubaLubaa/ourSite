@@ -72,6 +72,7 @@ class Person():
             range='F1:F1',
             majorDimension='ROWS'
         ).execute()
+        #print(valuesCount, "-------------")
         Person.counterRegistred = int(valuesCount["values"][0][0])
         # --------------------------
 

@@ -35,8 +35,6 @@ def writeAllData(_range, dataInput, spreadSheets):
         }
     ).execute()
 
-writeAllData("A-B",[])
-
 weekDays = ["Понедельник","Вторник","Среда","Четверг","Пятница","Суббота","Воскресенье"] # Дни недели
 sc = Schedule()
 sc.createSchedule()
@@ -81,6 +79,5 @@ man.visit("109",visitTime4,sc)
 time4 = sc.getVisitTimeNormal(visitTime4[0],visitTime4[1])
 
 #print(sc.getFreeTime()[0])
-writeAllData("A-B",[["89134823222","89134823214","89134829454","89134829304"],[[]]])
 sc.patientLeft(oldGirl)
 #print(sc.getFreeTime()[0])
